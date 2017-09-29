@@ -20,10 +20,3 @@ int main (int argc, char *argv[])
 
   return 0;
 }
-
-
-Make a program where you type in an argument and in the program take the argument and iterate across it printing out each character.
-put in git
-tell Jake where the git is
-
-printf("%c\n", foo );
