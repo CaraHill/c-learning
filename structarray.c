@@ -29,3 +29,5 @@ int main ()
 
   return 0;
 }
+
+/* Update by making the size of the array dynamic, and names are assigned to structs within the people array randomly from an array of strings. */
