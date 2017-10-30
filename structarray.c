@@ -2,27 +2,35 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct person {
   char *name;
   int age;
 } person;
 
-int main ()
-{
-  struct person people[5];
+char *namearray[10];
 
-  people[0].name = "Polly McMolly";
-  people[1].name = "George Foreman";
-  people[2].name = "Uma Thurman";
-  people[3].name = "James Dean";
-  people[4].name = "Hermione Granger";
-  people[5].name = "Harry Potter";
+namearray[0] = "Polly McMolly";
+namearray[1] = "George Foreman";
+namearray[2] = "Uma Thurman";
+namearray[3] = "James Dean";
+namearray[4] = "Hermione Granger";
+namearray[5] = "Harry Potter";
+namearray[6] = "James Bond";
+namearray[7] = "Elizabeth Bathory";
+namearray[8] = "Tina Turner";
+namearray[9] = "Beyonce";
+
+int main (int argc, int argv)
+{
+  struct person people[argv];
 
   int index = 0;
 
   while(index < 6)
   {
+    people[index].name = namearray[rand() % 10];
     printf("Person #%d in the array is called %s.\n", index + 1, people[index].name);
     index++;
   }
