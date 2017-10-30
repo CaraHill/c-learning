@@ -41,8 +41,11 @@ int main (int argc, char **argv)
 
   while(index < arraylength)
   {
+    // assign a name to each struct randomly from the array of names
     people[index].name = namearray[rand() % 10];
-    printf("Person #%d in the array is called %s.\n", index + 1, people[index].name);
+    //give the person an age
+    people[index].age = rand() % 100;
+    printf("Person #%d in the array is called %s and is %d years old.\n", index + 1, people[index].name, people[index].age);
     index++;
   }
 
